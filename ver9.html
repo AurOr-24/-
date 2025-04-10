@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>คุณจะขี้เกียจแค่ไหนวันนี้?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #result {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #f7e5f7;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #eb5e3f;
+    }
+  </style>
+</head>
+<body>
+  <h1>วันนี้คุณจะขี้เกียจแค่ไหน? 🥱</h1>
+  <button onclick="generateLazyLevel()">ทำนายเลย!</button>
+  <div id="result"></div>
+
+  <script>
+    function generateLazyLevel() {
+      const levels = [
+        'ขี้เกียจสุดๆ ไม่ลุกจากเตียงแน่นอน',
+        'พอทำอะไรได้บ้าง แต่ก็ยังขี้เกียจอยู่ดี',
+        'กลางๆ ขึ้นอยู่กับกาแฟถ้วยแรก',
+        'วันนี้ขยันผิดปกติ!',
+        'เหมือนมีพลังงานล้นเหลือ อยากล้างบ้าน!'
+      ];
+      const result = levels[Math.floor(Math.random() * levels.length)];
+      document.getElementById('result').textContent = result;
+    }
+  </script>
+</body>
+</html>
